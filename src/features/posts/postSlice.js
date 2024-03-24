@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchPosts = createAsyncThunk("post/fetchPosts", async()=>{
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1/comments");
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1/omments");
     return res.data;
 })
 
@@ -24,7 +24,7 @@ const postSlice = createSlice({
         });
         builder.addCase(fetchPosts.rejected, (state, action)=>{
             state.isLoading = false,
-            state.error = action.payload,
+            state.error = action.error.message,
             state.posts = []
         })
     }

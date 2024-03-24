@@ -12,7 +12,7 @@ const PostView = () => {
     <div>
         <h1>All Posts</h1>
         {isLoading && <h1>Post is loading ...</h1>}
-        {error && <p>{error.message}</p>}
+        {error && <p>{error}</p>}
         {posts && posts?.map((post)=>{
             const {id, name, email, body} = post;
             return <div key={id}>
