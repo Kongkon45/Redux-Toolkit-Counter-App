@@ -3,6 +3,7 @@ import counterReducer from "../features/counter/counterSlice";
 import calculatorReducer from "../features/calculator/calculatorSlice";
 import postReducer from "../features/posts/postSlice";
 import countReducer from "../features/count/countSlice";
+import usersReducer from "../features/users/usersSlice";
 
 const store = configureStore({
     reducer:{
@@ -10,7 +11,8 @@ const store = configureStore({
         calculator : calculatorReducer,
         post : postReducer,
 
-        count : countReducer
+        count : countReducer,
+        users : usersReducer
     }
 })
 
