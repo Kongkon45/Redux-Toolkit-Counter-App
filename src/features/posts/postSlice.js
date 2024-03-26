@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchPosts = createAsyncThunk("post/fetchPosts", async()=>{
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1/omments");
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1/comments");
     return res.data;
 })
 
